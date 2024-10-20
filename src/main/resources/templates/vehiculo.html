@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehiculo</title>
+</head>
+<body>
+    <h1>Lista de Vehiculos de Juanfra</h1>
+     <table>
+         <tr>
+             <th>Codigo</th>
+             <th>Marca</th>
+             <th>Modelo</th>
+             <th>Color</th>
+             <th>Placa</th>
+         </tr>
+         <tr th:each="vehiculo : ${listaVehiculos}">
+             <td th:text="${vehiculo.codigo}></td>
+             <td th:text="${vehiculo.marca}></td>
+             <td th:text="${vehiculo.modelo}></td>
+             <td th:text="${vehiculo.color}></td>
+             <td th:text="${vehiculo.placa}></td>
+         </tr>
+     </table>
+</body>
+</html>
